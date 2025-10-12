@@ -1,0 +1,6 @@
+./compile.sh
+./run1.sh sample
+minisat sample.satinput sample.satoutput
+./run2.sh sample
+python3 format_checker.py sample
+

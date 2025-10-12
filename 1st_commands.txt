@@ -1,0 +1,2 @@
+python3 testcase_gen.py --N 10 --M 10 --K 3 --J 2 --count 5 --mode constructive --prefix sample
+
