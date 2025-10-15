@@ -61,11 +61,12 @@ void add_at_most_k_combinatorial(const vector<int>& vars, int Klimit, vector<vec
     if (n <= Klimit) return;
     int r = Klimit + 1; // forbid any r-set
     // generate all combinations of r indices out of n
-    vector<int> comb(r);
+    vector<int> comb(r); // avoiding any set of r variables being simultaneously true
     for (int i = 0; i < r; ++i) comb[i] = i;
     while (true) {
         vector<int> clause;
         for (int i = 0; i < r; ++i) clause.push_back(-vars[comb[i]]);
+        // adds the constraint that not all of  
         clauses.push_back(move(clause));
         // next combination
         int t = r - 1;
